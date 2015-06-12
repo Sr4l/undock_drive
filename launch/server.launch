@@ -5,10 +5,10 @@
           To get the current position of the robot a tf lookup between
           global_frame and base_frame is used. -->
     <param name="global_frame" value="map"/>
-    <param name="base_frame" value="Turtlebot3/base_link"/>
+    <param name="base_frame" value="base_link"/>
     
     <!-- this is the topic name where the Twist messages are send to -->
-    <param name="velocity_cmd_topic" value="Turtlebot3/mobile_base/commands/velocity"/>
+    <param name="velocity_cmd_topic" value="mobile_base/commands/velocity"/>
     
     <!-- the distance in meter a goal is considered as reached -->
     <param name="target_reached_distance" value="0.2"/>
