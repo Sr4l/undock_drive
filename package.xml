@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package>
+  <name>undock_drive</name>
+  <version>1.0.0</version>
+  <description>
+    The intension of this package is to provide a Action Server based
+    undocking to a specific position on the map, with a defined speed.
+  </description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
+  <maintainer email="LarsKistner@sr4l.de">Lars Kistner</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>BSD</license>
+
+
+  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- Example: -->
+  <url type="website">http://github.com/Sr4l/undock_drive</url>
+
+
+  <!-- Author tags are optional, mutiple are allowed, one per tag -->
+  <!-- Authors do not have to be maintianers, but could be -->
+  <author email="LarsKistner@sr4l.de">Lars Kistner</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>actionlib_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+  
+  <run_depend>rospy</run_depend>
+  <run_depend>actionlib_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+</package>

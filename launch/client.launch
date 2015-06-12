@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="undock_drive" type="undock_drive_action_client.py" name="undock_drive_client">
+    <param name="undock_drive_topic" value="undock_drive_action"/>
+    
+    <!-- undock mode:
+         0 - travel backwards to target, than rotate to goal_yaw
+             no collision avoidance, check for free space, or other stuff
+    -->
+    <param name="undock_mode" value="0"/>
+    
+    <!-- the goal x coordinate in meter -->
+    <param name="goal_x" value="0.00"/>
+    
+    <!-- the goal y coordinate in meter -->
+    <param name="goal_y" value="0.00"/>
+    
+    <!-- the goal yaw orientation in rad -->
+    <param name="goal_yaw" value="-1.57"/>
+    
+    <!-- the goal transversal speed (maximum speed) -->
+    <param name="goal_trans_velocity" value="0.1"/>
+    
+    <!-- the goal rotation speed (NOT MAXIMUM SPEED YET)
+         speed is multiplied by yaw difference (0 to pi)
+         between goal and robot -->
+    <param name="goal_rot_velocity" value="1.0"/>
+    
+  </node>
+</launch>

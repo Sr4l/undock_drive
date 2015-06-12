@@ -1,0 +1,13 @@
+#goal definition
+float32 undock_mode
+float32 x
+float32 y
+float32 yaw
+float32 trans_velocity
+float32 rot_velocity
+---
+#result definition
+int32 status
+---
+#feedback
+int32 status
