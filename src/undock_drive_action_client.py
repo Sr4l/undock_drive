@@ -59,7 +59,7 @@ def status_translator(status):
   return 'Status({} - {})'.format(status, state)
 
 
-def undocking_cb(self, result):
+def undocking_cb(status, result):
     if result.status == GoalStatus.SUCCEEDED:
         rospy.loginfo("undocking_cb: Undocking succeded")
     elif result.status == GoalStatus.ABORTED:
