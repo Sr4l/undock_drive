@@ -51,7 +51,7 @@ class UndockDriveActionServer(object):
     def __init__(self, name):
         self.action_name = name
         self.global_frame = rospy.get_param("~global_frame", "/map")
-        self.base_frame = rospy.get_param("~base_frame", "{}base_link".format(rospy.get_namespace()))
+        self.base_frame = rospy.get_param("~base_frame", "{}base_footprint".format(rospy.get_namespace()))
         velocity_cmd_topic = rospy.get_param("~velocity_cmd_topic", "mobile_base/commands/velocity")
         
         self.target_reached_distance = rospy.get_param("~target_reached_distance", 0.2) # m
