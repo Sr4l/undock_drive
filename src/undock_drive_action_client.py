@@ -45,7 +45,7 @@ from undock_drive.msg import DockAction, DockFeedback, DockResult, DockGoal
 
 
 def status_translator(status):
-  if 0: print ''
+  if 0: print('')
   elif status == GoalStatus.PENDING   : state='PENDING'
   elif status == GoalStatus.ACTIVE    : state='ACTIVE'
   elif status == GoalStatus.PREEMPTED : state='PREEMPTED'
@@ -71,7 +71,7 @@ def undocking_cb(status, result):
 
 
 def main():
-    print "Init node"
+    print("Init node")
     rospy.init_node('undock_drive_action_client')
     
     undock_drive_topic = rospy.get_param("~undock_drive_topic", "undock_drive_action") 
