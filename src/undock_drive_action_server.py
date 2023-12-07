@@ -71,7 +71,7 @@ class UndockDriveActionServer(object):
             now = rospy.Time.now()
             self.tflistener.waitForTransform(self.global_frame, self.base_frame, now, rospy.Duration(1.0))
             (trans,rot) = self.tflistener.lookupTransform(self.global_frame, self.base_frame, now)
-        except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException), e:
+        except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException) as e:
             rospy.logerr("{}: {}".format(self.action_name, e))
             return False
         
@@ -94,7 +94,7 @@ class UndockDriveActionServer(object):
         return True if reached, False if not
         """
         delta_orientation = get_delta_orientation(target_orientation, robot_orientation)
-        print delta_orientation, self.target_reached_angle
+        print(delta_orientation, self.target_reached_angle)
         if abs(delta_orientation) <= self.target_reached_angle:
             # we reached our target orientation stop
             return True
